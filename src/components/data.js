@@ -20,7 +20,7 @@ export const projectsData = [
     images: require("./Images/portfolio-cover.jpg"),
     description:
       "Showcases my most recent work with a minimalist website design",
-    pageLink: "andreiagmata.com",
+    pageLink: "https://andreiagmata.com/",
     githubLink: "https://github.com/AndreiAgmata/My-Portfolio/tree/main/src",
   },
 ];
