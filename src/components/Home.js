@@ -10,7 +10,7 @@ function Home() {
           <Container>
             <div className="header-content">
               <h1 className="display-6">Hi, my name is</h1>
-              <h1 className="display-1 font-weight-bold">Andrei Agmata.</h1>
+              <h1 className="display-1 fw-bold">Andrei Agmata.</h1>
               <p className="lead">
                 I am currently studying Computer Programming and Analysis at
                 Seneca College

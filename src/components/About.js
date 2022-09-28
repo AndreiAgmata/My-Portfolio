@@ -7,9 +7,7 @@ function About() {
         <div className="about">
           <Container>
             <div className="about-content">
-              <h1 className="display-6 text-center font-weight-bold">
-                About me
-              </h1>
+              <h1 className="display-6 text-center fw-bold">About me</h1>
               <br />
               <Row>
                 <Col md>
@@ -28,12 +26,12 @@ function About() {
                     my final project.
                   </p>
                   <p>
-                    After graduating, I took the opportunity to go to Seneca and
+                    After graduating, I took the opportunity to go to Seneca to
                     further enhance my knowledge in programming. Fast forward to
                     today, I have done multiple school and side projects on my
                     own and in collaboration with my colleagues. I am
-                    continuously working on improving and expanding my skill set
-                    in software and web development,{" "}
+                    continuously working on improving and expanding my skills
+                    set in software and web development,{" "}
                     <em>one block of code at a time.</em>
                   </p>
                 </Col>
