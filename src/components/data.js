@@ -11,7 +11,7 @@ export const projectsData = [
     title: "Web Wildlife Walk",
     images: require("./Images/wildlife-cover.jpg"),
     description:
-      "Features many different animals through an interactive website that gathers data from the iNatural's database",
+      "Features many different species through an interactive website that gathers data from the iNatural's database",
     pageLink: "https://website-woad-three.vercel.app/",
     githubLink: "https://github.com/AndreiAgmata/web-wildlife-walk",
   },
