@@ -20,7 +20,7 @@ export const projectsData = [
     images: require("./Images/portfolio-cover.jpg"),
     description:
       "Showcases my most recent work with a minimalist website design",
-    pageLink: "https://website-woad-three.vercel.app/",
-    githubLink: "https://github.com/AndreiAgmata/web-wildlife-walk",
+    pageLink: "andreiagmata.com",
+    githubLink: "https://github.com/AndreiAgmata/My-Portfolio/tree/main/src",
   },
 ];
