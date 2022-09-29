@@ -23,4 +23,12 @@ export const projectsData = [
     pageLink: "https://andreiagmata.com/",
     githubLink: "https://github.com/AndreiAgmata/My-Portfolio",
   },
+  {
+    title: "New York Restaurants",
+    images: require("./Images/restaurants-cover.jpg"),
+    description:
+      "Implements an API that gathers New York Restaurants data from MongoDB",
+    pageLink: "https://new-york-restaurants-five.vercel.app/Restaurants",
+    githubLink: "https://github.com/AndreiAgmata/New-York-Restaurants",
+  },
 ];
