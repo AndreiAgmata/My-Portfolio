@@ -27,7 +27,7 @@ function NavigationBar() {
               <Container>
                 <Button
                   variant="outline-light"
-                  href="https://drive.google.com/file/d/1H6agvd9ow4ifdUrmklCNVR8aCNRfLikP/view?usp=sharing"
+                  href="https://docs.google.com/document/d/1BoOrMm1xIwV11bNVWdc7lIt_vwg95FRhmzrKNTcP83o/edit?usp=sharing"
                 >
                   Resume
                 </Button>
