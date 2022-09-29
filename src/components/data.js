@@ -21,6 +21,6 @@ export const projectsData = [
     description:
       "Showcases my most recent work with a minimalist website design",
     pageLink: "https://andreiagmata.com/",
-    githubLink: "https://github.com/AndreiAgmata/My-Portfolio/tree/main/src",
+    githubLink: "https://github.com/AndreiAgmata/My-Portfolio",
   },
 ];
