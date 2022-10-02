@@ -31,4 +31,13 @@ export const projectsData = [
     pageLink: "https://new-york-restaurants-five.vercel.app/Restaurants",
     githubLink: "https://github.com/AndreiAgmata/New-York-Restaurants",
   },
+  {
+    title: "Basketball Management App",
+    images: require("./Images/basketball-cover.jpg"),
+    description:
+      "A web app that uses a backend API to manage the teams and players of a local basketball league",
+    pageLink: "https://basketball-league-management-app.vercel.app/",
+    githubLink:
+      "https://https://github.com/AndreiAgmata/Basketball-League-Management.com/AndreiAgmata/New-York-Restaurants",
+  },
 ];
