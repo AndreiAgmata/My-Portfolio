@@ -5,7 +5,7 @@ function NavigationBar() {
     <>
       <Navbar
         collapseOnSelect
-        bg="gradient"
+        bg="gradient-dark"
         variant="dark"
         expand="lg"
         fixed="top"
