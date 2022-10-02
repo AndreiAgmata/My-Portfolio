@@ -4,8 +4,8 @@ function NavigationBar() {
   return (
     <>
       <Navbar
+        id="navbar"
         collapseOnSelect
-        bg="gradient-dark"
         variant="dark"
         expand="lg"
         fixed="top"
