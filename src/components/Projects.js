@@ -44,6 +44,15 @@ function Projects() {
                   );
                 })}
               </Container>
+              <Container className="buttons-container">
+                <Button
+                  variant="outline-light"
+                  href="https://github.com/AndreiAgmata"
+                  size="lg"
+                >
+                  See More
+                </Button>
+              </Container>
             </div>
           </Container>
         </div>
