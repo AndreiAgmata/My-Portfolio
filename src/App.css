@@ -54,6 +54,12 @@
   color: white;
 }
 
+.about-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #me {
   position: relative;
   display: block;

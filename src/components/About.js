@@ -9,8 +9,8 @@ function About() {
             <div className="about-content">
               <h1 className="display-6 text-center fw-bold">About me</h1>
               <br />
-              <Row>
-                <Col md>
+              <Row className="about-desc">
+                <Col md={6}>
                   <p>
                     Hello! I am Andrei. I am currently on my 3rd and last year
                     in the Computer programming and Analysis Program at Seneca
@@ -35,9 +35,9 @@ function About() {
                     <em>one block of code at a time.</em>
                   </p>
                 </Col>
-                <Col>
+                {/* <Col>
                   <img alt="me" src={me} className="img-fluid" id="me"></img>
-                </Col>
+                </Col> */}
               </Row>
             </div>
           </Container>
