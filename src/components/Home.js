@@ -16,6 +16,7 @@ function Home() {
             autoPlay
             loop
             muted
+            playsInline
           ></video>
           <Container>
             <div className="header-content">
