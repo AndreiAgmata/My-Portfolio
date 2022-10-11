@@ -1,8 +1,10 @@
 import { Container, Form, Button, Col } from "react-bootstrap";
-
+import { useInView } from "react-intersection-observer";
 import emailjs from "emailjs-com";
 
 function Contact() {
+  const { ref, inView } = useInView();
+
   const sendEmail = e => {
     e.preventDefault();
 
@@ -30,8 +32,13 @@ function Contact() {
       <section id="contact">
         <div className="contact">
           <Container>
-            <div className="contact-content">
-              <h1 className="display-6 text-center fw-bold">Contact Me</h1>
+            <div
+              className={`${"contact-content"} ${
+                inView ? "animateContent" : ""
+              }`}
+              ref={ref}
+            >
+              <h2 className="display-5 text-center fw-bold">Contact Me</h2>
               <Container className="form-container">
                 <Col xs={8}>
                   <Form onSubmit={sendEmail}>

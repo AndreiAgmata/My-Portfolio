@@ -1,13 +1,20 @@
 import { Container, Col, Row } from "react-bootstrap";
-import me from "./Images/sampleImgMe.jpg";
+import { useInView } from "react-intersection-observer";
+// import me from "./Images/sampleImgMe.jpg";
+
 function About() {
+  const { ref, inView } = useInView();
+
   return (
     <>
       <section id="about">
         <div className="about">
           <Container>
-            <div className="about-content">
-              <h1 className="display-6 text-center fw-bold">About me</h1>
+            <div
+              className={`${"about-content"} ${inView ? "animateContent" : ""}`}
+              ref={ref}
+            >
+              <h2 className="display-5 text-center fw-bold">About me</h2>
               <br />
               <Row className="about-desc">
                 <Col md={6}>

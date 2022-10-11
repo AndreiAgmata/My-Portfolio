@@ -1,12 +1,22 @@
 import { Container } from "react-bootstrap";
 import { IconContext } from "react-icons";
 import { MdExpandMore } from "react-icons/md";
+import videoBg from "./Videos/code.mp4";
+import videoPoster from "./Images/background.jpg";
 
 function Home() {
   return (
     <>
       <section id="home">
         <div className="header">
+          <video
+            className="videoBg"
+            src={videoBg}
+            poster={videoPoster}
+            autoPlay
+            loop
+            muted
+          ></video>
           <Container>
             <div className="header-content">
               <h1 className="display-6">Hi, my name is</h1>
@@ -18,9 +28,9 @@ function Home() {
                 Specializing in software and web development.
               </p>
 
-              <div className="learnMoreContainer">
+              <div className="learnMoreContainer bounceInDown">
                 <div className="learnMoreContents">
-                  <IconContext.Provider value={{ size: 80 }}>
+                  <IconContext.Provider value={{ size: 100 }}>
                     <>
                       <a href="#about">
                         <MdExpandMore fill="white" />
