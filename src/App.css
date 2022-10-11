@@ -1,3 +1,36 @@
+.loader {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.loader-exit {
+  animation: loader-fade;
+  animation-duration: 1s;
+}
+
+@keyframes loader-fade {
+  from {
+    top: 0;
+    opacity: 1;
+  }
+  to {
+    top: -100%;
+    opacity: 0;
+  }
+}
+
+.loading-logo {
+  color: white;
+  font-size: 10rem;
+  animation: backInDown;
+  animation-duration: 2s;
+}
+
 @media (max-width: 768px) {
   .navbar-nav {
     float: none;
@@ -187,4 +220,9 @@
 .animateCards {
   animation-duration: 2s;
   animation-name: zoomIn;
+}
+
+.animateLoader {
+  animation: fadeOut;
+  animation-duration: 2s;
 }
