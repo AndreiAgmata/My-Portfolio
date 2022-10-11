@@ -10,7 +10,6 @@
 
 #navbar {
   background-color: rgba(0, 0, 0, 0.8);
-  position: absolute;
   animation: fade-in 2s;
 }
 
