@@ -26,7 +26,7 @@
 
 .loading-logo {
   color: white;
-  font-size: 10rem;
+  font-size: 5rem;
   animation: backInDown;
   animation-duration: 2s;
 }
