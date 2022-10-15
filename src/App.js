@@ -6,6 +6,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import NavigationBar from "./components/NavigationBar";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -29,6 +30,7 @@ function App() {
       ) : (
         <>
           <NavigationBar /> <Home /> <About /> <Projects /> <Contact />
+          <Footer />
         </>
       )}
     </div>

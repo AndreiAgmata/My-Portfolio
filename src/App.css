@@ -163,7 +163,7 @@
 .contact {
   position: relative;
   background-color: black;
-  height: 100vh;
+  height: 80vh;
 }
 
 .contact-content {
@@ -177,6 +177,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.footer {
+  background-color: rgb(0, 0, 0);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 10px;
+  color: white;
+  height: 20vh;
 }
 
 /* animations */
