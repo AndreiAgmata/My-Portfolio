@@ -1,10 +1,20 @@
+import { React } from "react";
 import { Container } from "react-bootstrap";
 import { IconContext } from "react-icons";
 import { MdExpandMore } from "react-icons/md";
+//import gsap from "gsap";
 import videoBg from "./Videos/code.mp4";
 import videoPoster from "./Images/background.jpg";
 
 function Home() {
+  // useEffect
+  // gsap.from(".header-content", {
+  //   duration: 1,
+  //   opacity: 1,
+  //   y: -60,
+  //   ease: "power4.out",
+  // });
+
   return (
     <>
       <section id="home">

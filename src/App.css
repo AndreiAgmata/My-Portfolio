@@ -8,29 +8,6 @@
   background-color: black;
 }
 
-.loader-exit {
-  animation: loader-fade;
-  animation-duration: 1s;
-}
-
-@keyframes loader-fade {
-  from {
-    top: 0;
-    opacity: 1;
-  }
-  to {
-    top: -100%;
-    opacity: 0;
-  }
-}
-
-.loading-logo {
-  color: white;
-  font-size: 5rem;
-  animation: backInDown;
-  animation-duration: 2s;
-}
-
 @media (max-width: 768px) {
   .navbar-nav {
     float: none;
@@ -44,6 +21,10 @@
 #navbar {
   background-color: rgba(0, 0, 0, 0.8);
   animation: fade-in 2s;
+}
+
+#nav-logo {
+  height: 2rem;
 }
 
 .header {
@@ -191,52 +172,4 @@
   line-height: 10px;
   color: white;
   height: 20vh;
-}
-
-/* animations */
-
-@keyframes fade-in {
-  from {
-    top: -100%;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-@keyframes slide-up {
-  from {
-    opacity: 0;
-    line-height: 200px;
-  }
-  to {
-    opacity: 1;
-    line-height: 25px;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.animateContent {
-  animation-duration: 3s;
-  animation-name: fadeIn;
-}
-
-.animateCards {
-  animation-duration: 2s;
-  animation-name: zoomIn;
-}
-
-.animateLoader {
-  animation: fadeOut;
-  animation-duration: 2s;
 }
