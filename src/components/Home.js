@@ -1,52 +1,58 @@
-import { React } from "react";
+import { React, useEffect, useRef } from "react";
 import { Container } from "react-bootstrap";
 import { IconContext } from "react-icons";
 import { MdExpandMore } from "react-icons/md";
-//import gsap from "gsap";
-import videoBg from "./Videos/code.mp4";
-import videoPoster from "./Images/background.jpg";
+import { gsap } from "gsap";
 
 function Home() {
-  // useEffect
-  // gsap.from(".header-content", {
-  //   duration: 1,
-  //   opacity: 1,
-  //   y: -60,
-  //   ease: "power4.out",
-  // });
+  const tl = gsap.timeline();
+  const el = useRef();
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      tl.from(
+        [".headline h2", ".headline h1", ".headline h3"],
+        {
+          duration: 1,
+          y: 100,
+          ease: "power3.out",
+          stagger: 0.3,
+        },
+        4
+      ).from(".icon", {
+        duration: 1,
+        y: -100,
+        ease: "power3.out",
+      });
+    }, el);
 
+    return () => {
+      ctx.revert();
+    };
+  });
   return (
     <>
-      <section id="home">
-        <div className="header">
-          <video
-            className="videoBg"
-            src={videoBg}
-            poster={videoPoster}
-            autoPlay
-            loop
-            muted
-            playsInline
-          ></video>
+      <section id="home" ref={el}>
+        <div className="home">
           <Container>
-            <div className="header-content">
-              <h1 className="display-6">Hi, my name is</h1>
-              <h1 className="display-1 fw-bold">Andrei Agmata.</h1>
-              <p className="lead">
-                I am currently studying Computer Programming and Analysis at
-                Seneca College
-                <br />
-                Specializing in software and web development.
-              </p>
+            <div className="home-content">
+              <div className="headline">
+                <h2>Hi , my name is</h2>
+              </div>
+              <div className="headline">
+                <h1 className="display-1 fw-bold">Andrei Agmata.</h1>
+              </div>
+              <div className="headline">
+                <h3 className="lead">I build and design web applications</h3>
+              </div>
 
-              <div className="learnMoreContainer bounceInDown">
+              <div className="learnMoreContainer">
                 <div className="learnMoreContents">
                   <IconContext.Provider value={{ size: 100 }}>
-                    <>
+                    <div className="icon">
                       <a href="#about">
                         <MdExpandMore fill="white" />
                       </a>
-                    </>
+                    </div>
                   </IconContext.Provider>
                 </div>
               </div>

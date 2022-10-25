@@ -1,0 +1,300 @@
+.main {
+  display: none;
+}
+
+.main-contents {
+  display: none;
+}
+
+.preloader {
+  background-color: black;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  color: white;
+  z-index: 2;
+}
+
+#logo {
+  width: 15%;
+  height: auto;
+  animation: fill 0.5s ease forwards 2s;
+}
+
+#logo path:nth-child(1) {
+  stroke-dasharray: 1187;
+  stroke-dashoffset: 1187;
+  animation: logo-anim 2s ease forwards;
+}
+
+@keyframes logo-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}
+
+header {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.header-row {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+#nav-logo {
+  height: 2rem;
+}
+
+.menu-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger path {
+  fill: none;
+  stroke: white;
+  stroke-linecap: round;
+}
+
+.fullpage-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: none;
+}
+
+.fullpage-menu-inner {
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+  padding: 100px 60px;
+}
+
+.menu-bg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  span {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: block;
+  }
+}
+
+nav {
+  position: relative;
+  z-index: 10;
+  width: 100vw;
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    li {
+      overflow: hidden;
+      transition: transform 300ms ease-in-out 0s;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    a {
+      font-size: 4rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  nav li a {
+    font-size: 3rem;
+    line-height: 6rem;
+  }
+}
+
+.home {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./components/Images/background.jpg), no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.home-content {
+  color: white;
+}
+
+.learnMoreContainer {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.headline {
+  overflow: hidden;
+
+  span {
+    position: absolute;
+    font-size: 3rem;
+  }
+}
+
+.learnMoreContents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+.about {
+  position: relative;
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  z-index: -1;
+}
+
+.about-content {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: white;
+  line-height: 25px;
+}
+
+.about-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#me {
+  position: relative;
+  display: block;
+  margin: auto;
+  max-width: 70%;
+}
+
+.projects {
+  position: relative;
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  z-index: -1;
+}
+
+.projects-content {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: white;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.cards {
+  margin: 10px;
+}
+
+.card {
+  height: 100%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
+
+.contact {
+  position: relative;
+  background-color: black;
+  height: 80vh;
+  z-index: -1;
+}
+
+.contact-content {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: white;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  background-color: rgb(0, 0, 0);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 10px;
+  color: white;
+  height: 20vh;
+}
