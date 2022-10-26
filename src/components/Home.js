@@ -42,7 +42,14 @@ function Home() {
                 <h1 className="display-1 fw-bold">Andrei Agmata.</h1>
               </div>
               <div className="headline">
-                <h3 className="lead">I build and design web applications</h3>
+                <h3 className="lead">
+                  I build and design modern web applications
+                </h3>
+              </div>
+              <div className="headline">
+                <h3 className="lead">
+                  that guarantees a great user experience
+                </h3>
               </div>
 
               <div className="learnMoreContainer">

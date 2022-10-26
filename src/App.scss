@@ -17,12 +17,21 @@
   min-width: 100vw;
   color: white;
   z-index: 2;
+  display: "hidden";
 }
 
 #logo {
   width: 15%;
   height: auto;
   animation: fill 0.5s ease forwards 2s;
+}
+
+@media screen and (max-width: 767px) {
+  #logo {
+    width: 35%;
+    height: auto;
+    animation: fill 0.5s ease forwards 2s;
+  }
 }
 
 #logo path:nth-child(1) {
@@ -101,19 +110,19 @@ header {
   height: 100%;
   width: 100%;
   position: absolute;
+
   left: 0;
   top: 0;
   span {
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.95);
     display: block;
   }
 }
 
 nav {
   position: relative;
-  z-index: 10;
   width: 100vw;
   ul {
     padding-left: 0;
@@ -192,7 +201,7 @@ nav {
   overflow: hidden;
 }
 
-.about {
+#about {
   position: relative;
   background-color: black;
   min-height: 100vh;
@@ -201,17 +210,40 @@ nav {
   z-index: -1;
 }
 
+.about {
+  display: flex;
+  justify-content: center;
+}
+
 .about-content {
   padding-top: 50px;
   padding-bottom: 50px;
+  width: 75%;
   color: white;
-  line-height: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.about-desc {
+.skills {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+}
+
+.skill {
+  h5 {
+    padding-right: 10px;
+  }
+  .icon {
+    margin-right: 5px;
+  }
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 #me {

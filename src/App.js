@@ -11,28 +11,38 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
-  const tl = gsap.timeline();
+  const el = useRef();
+  const tl = useRef();
   useEffect(() => {
-    tl.to(".main", { display: "inline" })
-      .to(".preloader", { opacity: 0 }, 3.5)
-      .to(".main-contents", { display: "inline" });
-  }, [tl]);
+    const ctx = gsap.context(() => {
+      tl.current = gsap.timeline();
+      tl.current
+        .to(".preloader", { display: "visible" })
+        .to(".main", { display: "inline" })
+        .to(".preloader", { opacity: 0, display: "none" }, 3.5)
+        .to(".main-contents", { display: "inline" });
+    }, el);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
     <>
-      <div className="preloader">
-        <Preloader />
-      </div>
-      <div className="main">
-        <NavigationBar />
-        <Home />
-        <div className="main-contents">
-          <About />
-          <Projects />
-          <Contact />
-          <Footer />
+      <section ref={el}>
+        <div className="preloader">
+          <Preloader />
         </div>
-      </div>
+        <div className="main">
+          <NavigationBar />
+          <Home />
+          <div className="main-contents">
+            <About />
+            <Projects />
+            <Contact />
+            <Footer />
+          </div>
+        </div>
+      </section>
     </>
   );
 }

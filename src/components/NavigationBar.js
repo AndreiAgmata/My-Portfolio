@@ -8,6 +8,7 @@ function NavigationBar() {
   const tl = useRef();
   const tl2 = useRef();
   const tl3 = useRef();
+
   function handleMenuClicked() {
     setMenuClicked(!menuClicked);
   }
@@ -66,7 +67,7 @@ function NavigationBar() {
       });
 
       tl2.current.from(
-        ".links",
+        ".main-menu li a",
         {
           duration: 1,
           y: "100%",
@@ -90,13 +91,13 @@ function NavigationBar() {
       tl2.current.reverse();
       tl.current.reverse();
     }
-  }, [menuClicked, tl, tl2]);
+  }, [menuClicked]);
 
   useEffect(() => {
     let ctx = gsap.context(() => {
       tl3.current = gsap.timeline();
       tl3.current
-        .from("header", { duration: 1, opacity: 0 }, 4)
+        .from("header", { duration: 1, y: -100 }, 5)
         .from("#nav-logo", { duration: 1, y: -100 }, "start")
         .from(".menu-toggle", { duration: 1, y: -100 }, "start");
     }, el);
@@ -158,18 +159,26 @@ function NavigationBar() {
             <nav>
               <ul className="main-menu">
                 <li>
-                  <a href="#about" className="links">
+                  <a href="#about" onClick={handleMenuClicked}>
                     About
                   </a>
                 </li>
                 <li>
-                  <a href="#projects" className="links">
+                  <a href="#projects" onClick={handleMenuClicked}>
                     Projects
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="links">
+                  <a href="#contact" onClick={handleMenuClicked}>
                     Contact
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://docs.google.com/document/d/1CRHmMeYeKUj7szIUzNs95zaZDjWMltjgKTJspUmU9FA/edit?usp=sharing"
+                    onClick={handleMenuClicked}
+                  >
+                    Resume
                   </a>
                 </li>
               </ul>
