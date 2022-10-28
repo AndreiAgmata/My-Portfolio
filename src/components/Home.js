@@ -32,6 +32,7 @@ function Home() {
   return (
     <>
       <section id="home" ref={el}>
+        <div className="home-bg"></div>
         <div className="home">
           <Container>
             <div className="home-content">
@@ -43,13 +44,11 @@ function Home() {
               </div>
               <div className="headline">
                 <h3 className="lead">
-                  I build and design modern web applications
+                  A web and software developer that values
                 </h3>
               </div>
               <div className="headline">
-                <h3 className="lead">
-                  that guarantees a great user experience
-                </h3>
+                <h3 className="lead">user experience</h3>
               </div>
 
               <div className="learnMoreContainer">

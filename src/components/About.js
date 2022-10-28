@@ -28,7 +28,6 @@ function About() {
 
   const el = useRef();
   const tl = useRef();
-  const tl2 = useRef();
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -95,85 +94,95 @@ function About() {
                 <div className="skill">
                   <h5 className="skill-title">Languages</h5>
                   <IconContext.Provider value={{ size: 30 }}>
-                    <div className="icon">
-                      <SiCplusplus />
-                    </div>
-                    <div className="icon">
-                      <SiJavascript />
-                    </div>
-                    <div className="icon">
-                      <SiTypescript />
-                    </div>
-                    <div className="icon">
-                      <FaJava />
+                    <div className="icons">
+                      <div className="icon">
+                        <SiCplusplus />
+                      </div>
+                      <div className="icon">
+                        <SiJavascript />
+                      </div>
+                      <div className="icon">
+                        <SiTypescript />
+                      </div>
+                      <div className="icon">
+                        <FaJava />
+                      </div>
                     </div>
                   </IconContext.Provider>
                 </div>
                 <div className="skill">
                   <h5 className="skill-title">Front-End</h5>
                   <IconContext.Provider value={{ size: 30 }}>
-                    <div className="icon">
-                      <FaReact />
-                    </div>
-                    <div className="icon">
-                      <FaAngular />
-                    </div>
-                    <div className="icon">
-                      <AiFillHtml5 />
-                    </div>
-                    <div className="icon">
-                      <DiCss3 />
-                    </div>
-                    <div className="icon">
-                      <DiSass />
-                    </div>
-                    <div className="icon">
-                      <BsBootstrapFill />
-                    </div>
-                    <div className="icon">
-                      <SiGreensock />
+                    <div className="icons">
+                      <div className="icon">
+                        <FaReact />
+                      </div>
+                      <div className="icon">
+                        <FaAngular />
+                      </div>
+                      <div className="icon">
+                        <AiFillHtml5 />
+                      </div>
+                      <div className="icon">
+                        <DiCss3 />
+                      </div>
+                      <div className="icon">
+                        <DiSass />
+                      </div>
+                      <div className="icon">
+                        <BsBootstrapFill />
+                      </div>
+                      <div className="icon">
+                        <SiGreensock />
+                      </div>
                     </div>
                   </IconContext.Provider>
                 </div>
                 <div className="skill">
                   <h5 className="skill-title">Back-End</h5>
                   <IconContext.Provider value={{ size: 30 }}>
-                    <div className="icon">
-                      <SiNodedotjs />
-                    </div>
-                    <div className="icon">
-                      <SiExpress />
-                    </div>
-                    <div className="icon">
-                      <DiNpm />
+                    <div className="icons">
+                      <div className="icon">
+                        <SiNodedotjs />
+                      </div>
+                      <div className="icon">
+                        <SiExpress />
+                      </div>
+                      <div className="icon">
+                        <DiNpm />
+                      </div>
                     </div>
                   </IconContext.Provider>
                 </div>
                 <div className="skill">
                   <h5 className="skill-title">Database</h5>
                   <IconContext.Provider value={{ size: 30 }}>
-                    <div className="icon">
-                      <SiMongodb />
-                    </div>
-                    <div className="icon">
-                      <SiPostgresql />
-                    </div>
-                    <div className="icon">
-                      <SiOracle />
+                    <div className="icons">
+                      <div className="icon">
+                        <SiMongodb />
+                      </div>
+                      <div className="icon">
+                        <SiPostgresql />
+                      </div>
+                      <div className="icon">
+                        <SiOracle />
+                      </div>
                     </div>
                   </IconContext.Provider>
                 </div>
                 <div className="skill">
                   <h5 className="skill-title">Design</h5>
                   <IconContext.Provider value={{ size: 30 }}>
-                    <div className="icon">
-                      <FaFigma />
-                    </div>
-                    <div className="icon">
-                      <SiAdobephotoshop />
-                    </div>
-                    <div className="icon">
-                      <SiAdobeillustrator />
+                    <div className="icons">
+                      <div className="icon">
+                        <FaFigma />
+                      </div>
+                      <div className="icon">
+                        <SiAdobephotoshop />
+                      </div>
+                      <div className="icon">
+                        <SiAdobeillustrator />
+                      </div>
                     </div>
                   </IconContext.Provider>
                 </div>
