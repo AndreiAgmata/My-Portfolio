@@ -1,5 +1,5 @@
 import { React, useEffect, useRef } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
 import { IconContext } from "react-icons";
 import { MdExpandMore } from "react-icons/md";
 import { gsap } from "gsap";
@@ -18,9 +18,9 @@ function Home() {
           stagger: 0.3,
         },
         4
-      ).from(".icon", {
+      ).from(".buttons", {
         duration: 1,
-        y: -100,
+        opacity: 0,
         ease: "power3.out",
       });
     }, el);
@@ -40,27 +40,23 @@ function Home() {
                 <h2>Hi , my name is</h2>
               </div>
               <div className="headline">
-                <h1 className="display-1 fw-bold">Andrei Agmata.</h1>
+                <h1 className="display-1 fw-bold name">Andrei Agmata.</h1>
               </div>
               <div className="headline">
                 <h3 className="lead">
-                  A web and software developer that values
+                  A web and software developer that values user experience
                 </h3>
               </div>
-              <div className="headline">
-                <h3 className="lead">user experience</h3>
-              </div>
-
-              <div className="learnMoreContainer">
-                <div className="learnMoreContents">
-                  <IconContext.Provider value={{ size: 100 }}>
-                    <div className="icon">
-                      <a href="#about">
-                        <MdExpandMore fill="white" />
-                      </a>
-                    </div>
-                  </IconContext.Provider>
-                </div>
+              <div className="buttons">
+                <Button variant="outline-light me-2" href="#projects">
+                  Projects
+                </Button>
+                <Button
+                  variant="outline-light"
+                  href="https://docs.google.com/document/d/1CRHmMeYeKUj7szIUzNs95zaZDjWMltjgKTJspUmU9FA/edit?usp=sharing"
+                >
+                  Resume
+                </Button>
               </div>
             </div>
           </Container>

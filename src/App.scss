@@ -25,36 +25,19 @@
 #logo {
   width: 15%;
   height: auto;
-  animation: fill 0.5s ease forwards 2s;
+  fill: transparent;
 }
 
 @media screen and (max-width: 767px) {
   #logo {
     width: 35%;
     height: auto;
-    animation: fill 0.5s ease forwards 2s;
   }
 }
 
 #logo path:nth-child(1) {
   stroke-dasharray: 1187;
   stroke-dashoffset: 1187;
-  animation: logo-anim 2s ease forwards;
-}
-
-@keyframes logo-anim {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes fill {
-  from {
-    fill: transparent;
-  }
-  to {
-    fill: white;
-  }
 }
 
 header {
@@ -134,8 +117,8 @@ nav {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    @media screen and (max-width: 767px) {
-    }
+    // @media screen and (max-width: 767px) {
+    // }
 
     li {
       overflow: hidden;
@@ -176,7 +159,7 @@ nav {
     url(./components/Images/background.jpg), no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100%;
+  min-width: 100%;
   min-height: 100vh;
   position: fixed;
   z-index: -1;
@@ -192,7 +175,16 @@ nav {
 }
 
 .home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: white;
+  text-align: center;
+
+  .buttons {
+    margin-top: 15px;
+  }
 }
 
 .learnMoreContainer {
@@ -233,13 +225,12 @@ nav {
 }
 
 .about-content {
-  padding-top: 50px;
-  padding-bottom: 50px;
   width: 75%;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .skills {
@@ -277,43 +268,223 @@ nav {
 
 .projects {
   min-height: 100vh;
-  display: flex;
-  align-items: center;
 }
 
 .projects-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   padding-top: 50px;
-  padding-bottom: 50px;
   color: white;
 }
 
-.cards-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
-}
-
-.cards {
-  margin: 10px;
-}
-
-.card {
-  height: 100%;
-}
-
-.card-body {
+.projects-container {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  // flex-wrap: wrap;
+  // min-height: 100vh;
+  width: 100vw;
 }
 
-.buttons-container {
+.project-card {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: auto;
+  width: 100%;
+  padding-bottom: 10px;
+
+  img {
+    width: 40%;
+    height: auto;
+  }
+
+  .project-info {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    margin-left: -5%;
+
+    .icons {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 100%;
+      margin-left: 10px;
+    }
+
+    .project-content {
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 30px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .buttons-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.project-card-alt {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 10px;
+
+  img {
+    width: 40%;
+    height: auto;
+  }
+
+  .project-info {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 30%;
+    margin-right: -5%;
+
+    .icons {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 100%;
+      margin-left: 10px;
+    }
+
+    .project-content {
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 30px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .buttons-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    padding-bottom: 10px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .project-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 70%;
+      margin-top: -20%;
+      margin-left: 0;
+
+      .icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0;
+      }
+
+      .project-content {
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 30px;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .buttons-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  .project-card-alt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    padding-bottom: 10px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .project-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 70%;
+      margin-top: -20%;
+      margin-right: 0;
+
+      .icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0;
+      }
+
+      .project-content {
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 30px;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .buttons-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+.button {
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .contact {
